@@ -1,0 +1,7 @@
+struct compare
+{
+    bool operator()(const key& l,const key& r)
+    {
+        return l.val>r.val;
+    }
+};
