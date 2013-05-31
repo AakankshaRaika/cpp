@@ -1,0 +1,65 @@
+CHOCOLA, GNY07H, INUMBER,KNAPSACK, LEXBRAC, LSORT,
+"MBEEWALK", MINUS, MIXTURES,MTILE, MUSKET, ROCK, SQRBR,
+SUMITR, THREECOL, TRT, TWENDS
+
+
+http://www.spoj.pl/problems/MARTIAN/
+http://www.spoj.pl/problems/MIXTURES/
+http://www.spoj.pl/problems/SQRBR/
+http://www.spoj.pl/problems/SAMER08D/
+http://www.spoj.pl/problems/ACMAKER/
+http://www.spoj.pl/problems/AEROLITE/
+https://www.spoj.pl/problems/AIBOHP/
+https://www.spoj.pl/problems/BACKPACK/
+http://www.spoj.pl/problems/COURIER/
+http://www.spoj.pl/problems/DP/
+http://www.spoj.pl/problems/EDIST/
+http://www.spoj.pl/problems/KRECT/
+http://www.spoj.pl/problems/GNY07H/
+http://www.spoj.pl/problems/LISA/
+http://www.spoj.pl/problems/MINUS/
+http://www.spoj.pl/problems/NAJKRACI/
+http://www.spoj.pl/problems/PHIDIAS/
+http://www.spoj.pl/problems/PIGBANK/ ""
+http://www.spoj.pl/problems/PT07X/
+http://www.spoj.pl/problems/VOCV/
+http://www.spoj.pl/problems/TOURIST/
+http://www.spoj.pl/problems/MKBUDGET
+http://www.spoj.pl/problems/MMAXPER
+http://www.spoj.pl/problems/ANARC07G
+http://www.spoj.pl/problems/MENU
+
+http://www.spoj.pl/problems/ACMAKER/
+http://www.spoj.pl/problems/AEROLITE/
+http://www.spoj.pl/problems/COURIER/
+http://www.spoj.pl/problems/DP/
+http://www.spoj.pl/problems/EDIST/
+http://www.spoj.pl/problems/KRECT/
+http://www.spoj.pl/problems/GNY07H/
+http://www.spoj.pl/problems/LISA/
+http://www.spoj.pl/problems/MINUS/
+http://www.spoj.pl/problems/NAJKRACI/
+http://www.spoj.pl/problems/OILCOMP/
+http://www.spoj.pl/problems/PHIDIAS/
+http://www.spoj.pl/problems/PIGBANK/
+http://www.spoj.pl/problems/PT07X/
+http://www.spoj.pl/problems/VOCV/
+http://www.spoj.pl/problems/TOURIST/
+You can also use this:
+http://codeforces.com/blog/entry/325
+
+http://www.spoj.pl/problems/MKBUDGET
+http://www.spoj.pl/problems/MMAXPER
+http://www.spoj.pl/problems/MPILOT
+http://www.spoj.pl/problems/PARTY
+http://www.spoj.pl/problems/CRSCNTRY
+http://www.spoj.pl/problems/MBLAST
+http://www.spoj.pl/problems/MBALL
+http://www.spoj.pl/problems/MSTRING
+http://www.spoj.pl/problems/NGON
+http://www.spoj.pl/problems/PIGBANK
+http://www.spoj.pl/problems/SCUBADIV
+http://www.spoj.pl/problems/MINVEST
+http://www.spoj.pl/problems/ANARC07G
+http://www.spoj.pl/problems/FOOL
+http://www.spoj.pl/problems/MENU
