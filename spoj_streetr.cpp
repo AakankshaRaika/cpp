@@ -6,7 +6,7 @@
 #include<queue>
 #include<climits>
 
-#define MAX variable/whatever_req
+#define MAX 100001
 #define Max(a,b) ((a>b)?a:b)
 #define Min(a,b) ((a<b)?a:b)
 #define FOR(i,n) for(int i=0;i<(n);i++)
@@ -15,22 +15,43 @@
 
 using namespace std;
 
-void GCD(int a,int b)
+long long a[MAX];
+long long GCD(int a,int b)
 {
+    if(a==b)
+        return a;
+    if(a==0)
+        return b;
+    if(b==0)
+        return a;
+    if(~a&1){
+        if(b&1)
+            return GCD(a>>1,b);
+        else
+            return GCD(a>>1,b>>1)<<1;
+    }
+    if(~b&1)
+        return GCD(a,b>>1);
+    if(a>b)
+        return GCD((a-b)>>1,b);
+    return GCD((b-a)>>1,a);
 }
 
 int main()
 {
-    int n;
+    int n,c;
     S(n);
-    long long a[n];
-    long long d[n-1],gcd;
+    long long gcd;
     FOR(i,n)
         S(a[i]);
-    //sort(a,a+n);
-    REP(i,1,n)
-        d[i-1] = a[i]-a[i-1];
-    //FOR()
-    FOR(i,n-1)
-    cout<<d[i]<<" ";
+    sort(a,a+n);
+    gcd = a[1]-a[0];
+    for(int i=1;i<n;i++){
+        gcd = GCD(gcd,a[i]-a[i-1]);
+    }
+    c = 0;
+    for(int i=1;i<n;i++){
+        c = c + ((a[i]-a[i-1])/gcd)-1;
+    }
+    cout<<c;
 }
