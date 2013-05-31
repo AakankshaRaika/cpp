@@ -2,4 +2,4 @@
 *.exe
 *.pdf
 *.bat
-
+*.pyc
