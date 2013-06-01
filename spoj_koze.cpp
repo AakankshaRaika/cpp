@@ -72,7 +72,6 @@ void bfs(pos k){
             }
         }
     }
-    //cout<<cs<<" "<<cf<<"\n";
     if(cs>cf)
         csheep+=cs;
     else
