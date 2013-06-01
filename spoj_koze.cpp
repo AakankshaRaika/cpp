@@ -22,7 +22,7 @@ struct pos{
 char maze[MAX][MAX];
 bool v[MAX][MAX];
 int n,m,csheep,cfox;
-vector<pos> sheep,fox;
+vector<pos> sheep;
 
 bool isValid(int i,int j){
     return (i>=0 && j>=0 && i<n && j<m);
@@ -35,10 +35,8 @@ void _initialize()
         FOR(j,m){
             pos k;
             k.i = i,k.j = j;
-            if(maze[i][j]=='k') {
+            if(maze[i][j]=='k' || maze[i][j]=='v') {
                 sheep.push_back(k);
-            }else if(maze[i][j]=='v'){
-                fox.push_back(k);
             }
             v[i][j] == false;
         }
@@ -87,10 +85,6 @@ int main()
     FOR(i,sheep.size()){
         if(!v[sheep[i].i][sheep[i].j])
             bfs(sheep[i]);
-    }
-    FOR(i,fox.size()){
-        if(!v[fox[i].i][fox[i].j])
-            bfs(fox[i]);
     }
     cout<<csheep<<" "<<cfox;
 }
