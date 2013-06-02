@@ -28,6 +28,13 @@ void _initialize(int n){
     FOR(i,n) v[i]=0;
 }
 
+void print(int u){
+    if(u==-1) return;
+    //cout<<u<<" ";
+    print(pre[u].s);
+    printf("%c",pre[u].c);
+}
+
 void bfs(int s){
     int qt,qh,u,p[2];
     qt = qh = 0;
@@ -37,8 +44,11 @@ void bfs(int s){
     v[s] = 1;
     while(qh<qt){
         u = Q[qh++];
+        //cout<<u<<"\n";
         p[0] = (u*(10%n))%n;
+        //p[0] = u%n;
         p[1] = (p[0]+1)%n;
+        //cout<<p[0]<<"\t"<<p[1]<<"\n";
         FOR(i,2){
             if(!v[p[i]]){
                 pre[p[i]].s = u;
@@ -49,12 +59,6 @@ void bfs(int s){
             }
         }
     }
-}
-
-void print(int u){
-    if(u==-1) return;
-    print(pre[u].s);
-    printf("%c",pre[u].c);
 }
 
 int main(){
