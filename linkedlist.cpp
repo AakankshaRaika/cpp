@@ -1,4 +1,5 @@
 #include<iostream>
+
 #define max 15
 using namespace std;
 
@@ -10,18 +11,23 @@ struct node
 
 class linkedlist
 {
-public:
+    node *current,*r2;
     node* root;
+    void rev_insert(node* tmp);
+    void reverse(node*);
+public:
     linkedlist();
-    void list_insert(int);
+    void insert(int);
     void disp();
+    void reverse();
 };
 
 linkedlist::linkedlist()
 {
     root = NULL;
 }
-void linkedlist::list_insert(int d)
+
+void linkedlist::insert(int d)
 {
     if(root==NULL)
     {
@@ -39,7 +45,8 @@ void linkedlist::list_insert(int d)
 }
 void linkedlist::disp()
 {
-    node *tmp = root;
+    cout<<"\n";
+    node *tmp = this->root;
     if(root==NULL)
     {
         cout<<"empty\n";
@@ -50,15 +57,53 @@ void linkedlist::disp()
         cout<<tmp->data<<" ";
         tmp = tmp->next;
     }
+    cout<<"\n";
+}
+
+void linkedlist::reverse(){
+    r2 = root;
+    current = NULL;
+    this->reverse(root);
+    r2 = current = NULL;
+}
+
+void linkedlist::reverse(node *h){
+    if(h==NULL){
+        return;
+    }
+    else{
+        this->reverse(h->next);
+        this->rev_insert(h);
+    }
+}
+
+void linkedlist::rev_insert(node *h){
+    if(h->next==NULL){
+        current = root = h;
+        root->next = NULL;
+        return;
+    }else if(h==r2){
+        current->next = h;
+        current->next->next = NULL;
+        return;
+    }else{
+        current->next = h;
+        current = current->next;
+    }
 }
 
 int main()
 {
     linkedlist l;
-    l.list_insert(1);
     l.disp();
-    l.list_insert(3);
+    l.reverse();
+    for(int i=1;i<=20;i++)
+        l.insert(i);
     l.disp();
-    l.list_insert(5);
+    l.reverse();
+    l.disp();
+    l.insert(50);
+    l.disp();
+    l.reverse();
     l.disp();
 }
