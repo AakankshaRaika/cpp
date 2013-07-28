@@ -1,0 +1,6 @@
+15:35:35 **** Build of configuration Build (GNU) for project test ****
+make all 
+make: *** No rule to make target `all'.  Stop.
+
+15:35:35 Build Finished (took 169ms)
+
