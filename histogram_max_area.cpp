@@ -62,6 +62,10 @@ int getMaxAreaRec(int *arr,int *st,int n,int l,int r){
 	if(l==r)
 		return arr[l];
 	int m = RMQ(arr,st,n,l,r);
+	if(m==-1){
+        cout<<"Invalid entry";
+        return 0;
+	}
 	return max(getMaxAreaRec(arr,st,n,l,m-1),getMaxAreaRec(arr,st,n,m+1,r),(r-l+1)*arr[m]);
 }
 

@@ -1,0 +1,42 @@
+netstat -bn | grep -B 1 <program.exe> // for id of host and port
+
+
+In the technical interview, they asked me questions related to C,C++ and DS.
+1. Difference between C and CPP.
+2. Difference between structure and union and also a program to implement both.
+3. Operations on double link list like add to list ,delete from list reverse list etc.
+4. Call by value and call by reference.
+5. Questions on friend function,inline function
+
+
+// Arch linux //
+
+loadkeys us --not necessary
+systemctl stop dhcpcd.service
+ip link set enp0s3 up
+ip addr add 192.168.102.93/21 dev enp0s3
+ip route add default via 192.168.100.1
+nano /etc/resolv.conf //add nameserver 192.168.100.1 and 8.8.8.8
+
+// for cyberoam //
+curl -d "mode=191&username=user&password=pass&producttype=0" --dump headers -k https://172.16.32.222/login.xml
+
+// disk
+
+cfdisk /dev/sda --make partitions
+mkfs.ext4 /dev/sda1 --bootable hard disk
+
+/* if swap dsik 
+
+mkswap /dev/sda2
+swapon /dev/sda2
+
+*/
+
+mount /dev/sda1 /mnt
+pacstrap -i /mnt base
+
+// in case of db error do -# pacman -Syy
+
+///If pacman complains that error: failed to commit transaction (invalid or corrupted package), run the following command:
+pacman-key --init && pacman-key --populate archlinux

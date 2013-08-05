@@ -10,7 +10,7 @@ private:
     int top;
 public:
     Stack();
-    int isempty();
+    int empty();
     void push(type);
     type pop(void);
     type Top();
@@ -22,7 +22,7 @@ Stack<type>::Stack()
     this->top = -1;
 }
 template<class type>
-int Stack<type>::isempty()
+int Stack<type>::empty()
 {
     if(this->top==-1)
     {
@@ -44,7 +44,7 @@ void Stack<type>::push(type d)
 template<class type>
 type Stack<type>::pop()
 {
-    if(isempty())
+    if(this->empty())
     {
         cout<<"Underflow\n";
         return -1;
@@ -61,8 +61,8 @@ type Stack<type>::Top()
 
 int main()
 {
-    Stack<long> s;
-    int d;
+    Stack<float> s;
+    float d;
     for(int i=1;i<=14;i++)
         s.push(i);
     for(int j=1;j<=16;j++)
