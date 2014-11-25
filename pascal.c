@@ -17,7 +17,7 @@ int main(int argc, char const *argv[]){
 		}
 	}
 	for (i = 0; i < MX; ++i){
-		for(j=0; j<MX; j++){
+		for(j=0; j<=i; j++){
 			if(n[i][j]>0)
 			printf("%d ", n[i][j]);
 		}
