@@ -100,18 +100,18 @@ Node *put(Tree *tree, Node *node, TYPE key, TYPE val){
 	return node;
 }
 
-TYPE get(Tree *tree, TYPE key){
+Node *get(Tree *tree, TYPE key){
 	Node *tmp = tree->root;
 	while(tmp != NULL){
 		if(tmp->key == key){
-			return tmp->val;
-		}else if(tmp->key < key){
+			return tmp;
+		}else if(key < tmp->key){
 			tmp = tmp->left;
 		}else{
 			tmp = tmp->right;
 		}
 	}
-	return -1;
+	return NULL;
 }
 
 void preorder(Node *node){
@@ -187,41 +187,30 @@ void levelOrder(Node *node){
 
 int main(int argc, char const *argv[]) {
 	Tree *tree = init_tree();
-	tree->root = put(tree, tree->root, 1, 1);
-	printf("\n");
-	preorder(tree->root);
-	tree->root = put(tree, tree->root, 2, 1);
-	printf("\n");
-	preorder(tree->root);
-	tree->root = put(tree, tree->root, 3, 1);
-	printf("\n");
-	preorder(tree->root);
-	tree->root = put(tree, tree->root, 4, 1);
-	printf("\n");
-	preorder(tree->root);
-	tree->root = put(tree, tree->root, 5, 1);
-	printf("\n");
-	preorder(tree->root);
-	tree->root = put(tree, tree->root, 6, 1);
-	printf("\n");
-	preorder(tree->root);
-	tree->root = put(tree, tree->root, 7, 1);
-	printf("\n");
-	preorder(tree->root);
-	tree->root = put(tree, tree->root, 8, 1);
-	printf("\n");
-	preorder(tree->root);
-	tree->root = put(tree, tree->root, 9, 1);
-	printf("\n");
-	preorder(tree->root);
-	tree->root = put(tree, tree->root, 10, 1);
-	printf("\n");
-	preorder(tree->root);
+	int i;
+	for(i=1;i<=13;i++){
+		tree->root = put(tree, tree->root, i, 1);
+		printf("\n");
+		preorder(tree->root);
+	}
 	printf("\n");
 	postorder(tree->root);
 	printf("\n");
 	inorder(tree->root);
 	printf("\n");
 	levelOrder(tree->root);
+	Node *srch = get(tree, 1);
+	if(srch!=NULL){
+		printf("%d-%d\n", srch->key, srch->val);
+	}else{
+		printf("1 not found\n");
+	}
+	srch = NULL;
+	srch = get(tree, 15);
+	if(srch!=NULL){
+		printf("%d-%d\n", srch->key, srch->val);
+	}else{
+		printf("15 not found\n");
+	}
 	return 0;
 }
