@@ -188,7 +188,7 @@ void levelOrder(Node *node){
 int main(int argc, char const *argv[]) {
 	Tree *tree = init_tree();
 	int i;
-	for(i=1;i<=13;i++){
+	for(i=1;i<=12;i++){
 		tree->root = put(tree, tree->root, i, 1);
 		printf("\n");
 		preorder(tree->root);
@@ -199,7 +199,7 @@ int main(int argc, char const *argv[]) {
 	inorder(tree->root);
 	printf("\n");
 	levelOrder(tree->root);
-	Node *srch = get(tree, 1);
+	/*Node *srch = get(tree, 1);
 	if(srch!=NULL){
 		printf("%d-%d\n", srch->key, srch->val);
 	}else{
@@ -211,6 +211,6 @@ int main(int argc, char const *argv[]) {
 		printf("%d-%d\n", srch->key, srch->val);
 	}else{
 		printf("15 not found\n");
-	}
+	}*/
 	return 0;
 }
